@@ -1,0 +1,15 @@
+.list-card {
+  width: 400px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+}
