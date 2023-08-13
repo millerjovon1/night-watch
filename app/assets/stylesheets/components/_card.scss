@@ -25,10 +25,12 @@
   height: 200px;
   width: 100%;
   background: rgb(255, 255, 255);
+  opacity: 1;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
+  margin-top: 8px;
   margin: 4px auto;
 }
 
@@ -42,6 +44,7 @@
   font-size: 32px;
   font-weight: bold;
   margin: 0;
+  color: black;
 }
 
 .card-product p {
@@ -50,6 +53,7 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color:black
 }
 
 .card-product .card-product-infos {

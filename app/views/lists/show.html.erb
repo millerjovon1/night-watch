@@ -10,7 +10,7 @@
         <strong>
           <p>"<%= bookmark.comment %>"</p>
         </strong>
-        <%= link_to  bookmark_path(bookmark), class:"btn btn-success", data: { turbo_method: :delete, turbo_confirm: "Delete bookmark for #{bookmark.movie.title}?"} do%>
+        <%= link_to  bookmark_path(bookmark), class:"btn btn-light", data: { turbo_method: :delete, turbo_confirm: "Delete bookmark for #{bookmark.movie.title}?"} do%>
           <i class="fa-solid fa-trash-can"></i>
         <% end %>
       </div>
