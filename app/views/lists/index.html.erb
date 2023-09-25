@@ -5,9 +5,12 @@
       <%= link_to 'Add List', new_list_path, class: "btn btn-primary" %>
     </div>
   </div>
-  <div class="cards" >
+  <div>
+    <h2>latest streaming</h2>
+  </div>
+  <div class="cards">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list) do %>
+      <%=  link_to list_path(list), class:"text-decoration-none" do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
         url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/random/?<#{list.name.gsub(" ", " ")}" %>">
           <%= list.name %>
