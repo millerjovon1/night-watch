@@ -5,7 +5,11 @@ Movie.destroy_all
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
-
+movie = Movie.find_by(id: 48)
+if movie
+  movie.bookmarks.destroy_all
+  movie.destroy
+end
 response['results'].each do |movie_hash|
   puts
   p movie_hash
