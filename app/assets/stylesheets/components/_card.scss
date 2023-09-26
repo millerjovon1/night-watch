@@ -9,15 +9,16 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  position: relative;
   // padding: 0 40px;
 }
 .card-product {
@@ -26,18 +27,40 @@
   width: 100%;
   background: rgb(255, 255, 255);
   opacity: 1;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
   margin-top: 8px;
   margin: 4px auto;
+  position: relative;
+}
+.image-container {
+  position: relative;
+}
+
+.card-remove-link {
+  // position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  opacity: 0.8;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+/* Add these styles to make sure the icon appears above the image */
+.image-container i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .card-product img {
   height: 100%;
   width: 200px;
   object-fit: cover;
+  position: relative;
 }
 
 .card-product h2 {
@@ -50,10 +73,10 @@
 .card-product p {
   font-size: 16px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 0;
   margin-top: 8px;
-  color:black
+  color: black;
 }
 
 .card-product .card-product-infos {
