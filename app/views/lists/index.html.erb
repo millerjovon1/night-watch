@@ -10,12 +10,17 @@
   </div>
   <div class="cards">
     <% @lists.each do |list| %>
-      <%=  link_to list_path(list), class:"text-decoration-none" do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      <div class="image-container">
+        <%=  link_to list_path(list), class:"text-decoration-none", data: { turbo_frame: 'frame-id' } do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
         url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/random/?<#{list.name.gsub(" ", " ")}" %>">
-          <%= list.name %>
-        </div>
-      <% end %>
+            <%= list.name %>
+          </div>
+        <% end %>
+        <%= link_to list_path(list), class: 'text-decoration-none card-remove-link', data: { turbo_frame: 'frame-id', turbo_method: :delete, turbo_confirm: "remove-list #{list.name}?" } do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
